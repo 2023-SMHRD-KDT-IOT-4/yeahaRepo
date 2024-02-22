@@ -21,6 +21,12 @@ const questions = [
     type: "input",
     inputType: "number",
     image: "https://www.shutterstock.com/image-vector/height-man-vector-icon-scale-260nw-2184591037.jpg" // Update with an appropriate image path
+},
+{
+  question: "몸무게가 얼마나 되나요? (kg)",
+  type: "input",
+  inputType: "number",
+  image: "https://media.istockphoto.com/id/1368595082/ko/%EB%B2%A1%ED%84%B0/%EB%AC%B4%EA%B2%8C-%EA%B0%80%EB%8A%98%EA%B3%A0-%EB%AA%B8%EB%AC%B4%EA%B2%8C%EC%97%90-%EC%84%9C-%EC%9E%88%EB%8A%94-%EC%82%AC%EB%9E%8C.jpg?s=612x612&w=0&k=20&c=NX0QjcO9Is1imrYpHXpzkGuLMdvQnkiGFE1q_A_jV8U=" // Update with an appropriate image path
 }
   // Extend with more questions as needed
 ];
