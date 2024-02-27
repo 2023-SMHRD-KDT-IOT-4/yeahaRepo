@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<style>
+.tiles {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+}
+
+.actions {
+	display: flex; /* 가로로 요소들을 배치하기 위해 Flexbox 레이아웃 사용 */
+	flex-direction: row; /* 요소들을 가로로 나열 */
+	justify-content: space-between; /* 요소들 사이에 여백을 넣어 가로 공간을 균등하게 분배 */
+}
+</style>
+<html>
+<head>
+<title>Phantom by HTML5 UP</title>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="assets/css/main.css" />
+<noscript>
+	<link rel="stylesheet" href="assets/css/noscript.css" />
+</noscript>
+<script
+	th:src="@{https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js}"
+	charset="utf-8"></script>
+<script th:src="@{http://code.jquery.com/jquery-1.11.3.min.js}"></script>
+</head>
+<body class="is-preload">
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+
+				<!-- Logo -->
+				<a href="index.html" class="logo"> <span class="symbol"><img
+						src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+				</a>
+
+  <!-- 네이버아이디로로그인 버튼 노출 영역 -->
+  <div id="naver_id_login"></div>
+  <!-- //네이버아이디로로그인 버튼 노출 영역 -->
+				<!-- Nav -->
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="index">Home</a></li>
+				<li><a href="login">Ipsum veroeros</a></li>
+				<li><a href="generic.html">Tempus etiam</a></li>
+				<li><a href="generic.html">Consequat dolor</a></li>
+				<li><a href="elements.html">Elements</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<header>
+					<h1>
+						YEAHA<br /> 생애전주기 건강기능식품 추천 <a href="http://html5up.net">알고리즘</a>.
+					</h1>
+					<p></p>
+				</header>
+				<section class="tiles">
+					<article class="style1">
+						<span class="image"> <img src="images/pic01.jpg" alt="" />
+						</span> <a href="generic.html">
+							<h2>설문조사</h2>
+							<div class="content">
+								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor
+									veroeros et feugiat.</p>
+							</div>
+						</a>
+					</article>
+					<article class="style2">
+						<span class="image"> <img src="images/pic02.jpg" alt="" />
+						</span> <a href="Ingredient.html">
+							<h2>영양제 추천</h2>
+							<div class="content">
+								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor
+									veroeros et feugiat.</p>
+							</div>
+						</a>
+
+
+
+					</article>
+
+
+					<article class="style3">
+						<span class="image"> <img src="images/pic03.jpg" alt="" />
+						</span> <a href="Review.html">
+							<h2>리뷰</h2>
+							<div class="content">
+								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor
+									veroeros et feugiat.</p>
+							</div>
+						</a>
+					</article>
+					<article class="style4">
+						<span class="image"> <img src="images/pic04.jpg" alt="" />
+						</span> <a th:href="@{/naver_login}">
+							<h2>로그인</h2>
+							<div class="content">
+								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor
+									veroeros et feugiat.</p>
+							</div>
+						</a>
+					</article>
+					<article class="style5">
+						<span class="image"> <img src="images/pic05.jpg" alt="" />
+						</span> <a th:href="@{/home}">
+							<h2>홈</h2>
+							<div class="content">
+								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor
+									veroeros et feugiat.</p>
+							</div>
+						</a>
+					</article>
+					<article class="style6">
+						<span class="image"> <img src="images/pic06.jpg" alt="" />
+						</span> <a th:href="@{/test_home1}">
+							<h2>네이버테스트2홈</h2>
+							<div class="content">
+								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor
+									veroeros et feugiat.</p>
+							</div>
+						</a>
+					</article>
+					<article class="style2">
+						<span class="image"> <img src="images/pic07.jpg" alt="" />
+						</span> <a th:href="@{/receiveAC}">
+							<h2>토큰받아오기</h2>
+							<div class="content">
+								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor
+									veroeros et feugiat.</p>
+							</div>
+						</a>
+					</article>
+					<article class="style3">
+						<span class="image"> <img src="images/pic08.jpg" alt="" />
+						</span> <a href="generic.html">
+							<h2>Dolor</h2>
+							<div class="content">
+								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor
+									veroeros et feugiat.</p>
+							</div>
+						</a>
+					</article>
+					<article class="style1">
+						<span class="image"> <img src="images/pic09.jpg" alt="" />
+						</span> <a href="generic.html">
+							<h2>Nullam</h2>
+							<div class="content">
+								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor
+									veroeros et feugiat.</p>
+							</div>
+						</a>
+					</article>
+					<article class="style5">
+						<span class="image"> <img src="images/pic10.jpg" alt="" />
+						</span> <a href="generic.html">
+							<h2>Ultricies</h2>
+							<div class="content">
+								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor
+									veroeros et feugiat.</p>
+							</div>
+						</a>
+					</article>
+					<article class="style6">
+						<span class="image"> <img src="images/pic11.jpg" alt="" />
+						</span> <a href="generic.html">
+							<h2>Dictum</h2>
+							<div class="content">
+								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor
+									veroeros et feugiat.</p>
+							</div>
+						</a>
+					</article>
+					<article class="style4">
+						<span class="image"> <img src="images/pic12.jpg" alt="" />
+						</span> <a href="generic.html">
+							<h2>Pretium</h2>
+							<div class="content">
+								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor
+									veroeros et feugiat.</p>
+							</div>
+						</a>
+					</article>
+				</section>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<section>
+					<h2>Get in touch</h2>
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field half">
+								<input type="text" name="name" id="name" placeholder="Name" />
+							</div>
+							<div class="field half">
+								<input type="email" name="email" id="email" placeholder="Email" />
+							</div>
+							<div class="field">
+								<textarea name="message" id="message" placeholder="Message"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send" class="primary" /></li>
+						</ul>
+						<ul class="actions">
+							<li><input type="submit" value="Send" class="primary" /></li>
+						</ul>
+					</form>
+				</section>
+				<section>
+					<h2>Follow</h2>
+					<ul class="icons">
+						<li><a href="#" class="icon brands style2 fa-twitter"><span
+								class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands style2 fa-facebook-f"><span
+								class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands style2 fa-instagram"><span
+								class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands style2 fa-dribbble"><span
+								class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon brands style2 fa-github"><span
+								class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon brands style2 fa-500px"><span
+								class="label">500px</span></a></li>
+						<li><a href="#" class="icon solid style2 fa-phone"><span
+								class="label">Phone</span></a></li>
+						<li><a href="#" class="icon solid style2 fa-envelope"><span
+								class="label">Email</span></a></li>
+					</ul>
+				</section>
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+  <script th:inline="javascript">
+    /*<![CDATA[*/
+    var naver_id_login = new naver_id_login("puXPnu8QxCDBHhnD9gRj", "http://localhost:8087/");
+    var state = naver_id_login.getUniqState();  <!-- Assuming you are passing 'state' from the server-side -->
+    naver_id_login.setButton("white", 2, 40);
+    naver_id_login.setDomain("http://localhost:8087/");
+    naver_id_login.setState(state);
+    naver_id_login.setPopup();
+    naver_id_login.init_naver_id_login();
+    /*]]>*/
+  </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>네이버 로그인 결과</title>
+</head>
+
+<p style="font-size: 50px">로그인 성공 이후 페이지 이동  😊</p>
+
+
+
+<body>
+  
+  <div id="user-info">
+    <!-- 사용자 정보를 여기에 출력할 예정 -->
+  </div>
+
+  <script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" charset="utf-8"></script>
+  <script>
+    // 네이버 로그인 초기화
+    const naverLogin = new naver.LoginWithNaverId({
+   	  clientId: "puXPnu8QxCDBHhnD9gRj",
+ 	    callbackUrl: "http://localhost:8087/naver_login.html",
+      loginButton: { color: "green", type: 2, height: 40 }
+    });
+
+    // 네이버 로그인 초기화
+    naverLogin.init();
+
+    // 네이버 로그인 상태 확인 및 사용자 정보 출력
+    naverLogin.getLoginStatus(function(status) {
+      if (status) {
+        // 로그인 성공 시 사용자 정보 가져오기
+        const nickName = naverLogin.user.getNickName();
+        const age = naverLogin.user.getAge();
+        const birthday = naverLogin.user.getBirthday();
+
+        // 사용자 정보 출력
+        const userInfoDiv = document.getElementById('user-info');
+        userInfoDiv.innerHTML = `
+          <h3>로그인 성공</h3>
+          <div>사용자 닉네임: ${nickName}</div>
+          <div>사용자 나이(범위): ${age}</div>
+          <div>사용자 생일: ${birthday}</div>
+        `;
+      }
+    });
+  </script>
+</body>
+</html>
+</html>
