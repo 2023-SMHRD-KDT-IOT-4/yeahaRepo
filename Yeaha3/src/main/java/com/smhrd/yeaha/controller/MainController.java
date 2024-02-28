@@ -31,9 +31,9 @@ public class MainController {
 		return "index";
 	}
 
-	@RequestMapping(value = "/naver_login", method = RequestMethod.GET)
+	@RequestMapping(value = "/test_home1", method = RequestMethod.GET)
 	public String login() {
-		return "naver_login";
+		return "test_home1";
 	}
 
 	@RequestMapping(value = "/naver_success", method = RequestMethod.GET)
@@ -41,7 +41,7 @@ public class MainController {
 		return "naver_success";
 	}
 
-	@RequestMapping(value = "/test_home1", method = RequestMethod.GET)
+	@RequestMapping(value = "/naver_login", method = RequestMethod.GET)
 	public String home1(HttpSession session, Model model) {
 
 		String state = generateState();
@@ -55,41 +55,45 @@ public class MainController {
 		session.setMaxInactiveInterval(60 * 60);
 
 		model.addAttribute("state", encodedState);
-		return "test_home1";
+		return "naver_login";
 	}
 
-	@RequestMapping(value = "/receiveAC", method = RequestMethod.GET)
-	public String receiveAC(@RequestParam("code") String code, Model model) {
-		RestJsonService restJsonService = new RestJsonService();
+    @RequestMapping(value = "/receiveAC", method = RequestMethod.GET)
+    public String receiveAC(@RequestParam("code") String code, Model model, HttpSession session) {
+        RestJsonService restJsonService = new RestJsonService();
 
-		// access_token이 포함된 JSON String을 받아온다.
-		String accessTokenJsonData = restJsonService.getAccessTokenJsonData(code);
-		if (accessTokenJsonData == "error")
-			return "error";
+        // access_token이 포함된 JSON String을 받아옵니다.
+        String accessTokenJsonData = restJsonService.getAccessTokenJsonData(code);
+        if ("error".equals(accessTokenJsonData))
+            return "error";
 
-		// JSON String -> JSON Object
-		JSONObject accessTokenJsonObject = new JSONObject(accessTokenJsonData);
+        // JSON String -> JSON Object
+        JSONObject accessTokenJsonObject = new JSONObject(accessTokenJsonData);
 
-		// access_token 추출
-		String accessToken = accessTokenJsonObject.get("access_token").toString();
+        // access_token 추출
+        String accessToken = accessTokenJsonObject.getString("access_token");
 
-		// 유저 정보가 포함된 JSON String을 받아온다.
-		GetUserInfoService getUserInfoService = new GetUserInfoService();
-		String userInfo = getUserInfoService.getUserInfo(accessToken);
+        // 유저 정보가 포함된 JSON String을 받아옵니다.
+        GetUserInfoService getUserInfoService = new GetUserInfoService();
+        String userInfo = getUserInfoService.getUserInfo(accessToken);
 
-		// JSON String -> JSON Object
-		JSONObject userInfoJsonObject = new JSONObject(userInfo);
+        // JSON String -> JSON Object
+        JSONObject userInfoJsonObject = new JSONObject(userInfo);
 
-		// 유저의 Email 추출
-		JSONObject responseJsonObject = (JSONObject) userInfoJsonObject.get("response");
-		String email = responseJsonObject.get("email").toString();
+        // 유저의 Email 추출
+        JSONObject responseJsonObject = userInfoJsonObject.getJSONObject("response");
+        String email = responseJsonObject.getString("email");
 
-		model.addAttribute("email", email);
-		System.out.println(userInfo);
-		System.out.println(email);
-		System.out.println(accessToken);
-		return "success";
-	}
+        // 유저 정보를 세션에 저장합니다.
+        session.setAttribute("email", email);
+        session.setAttribute("accessToken", accessToken);
+
+        model.addAttribute("sessionEmail", email);
+        System.out.println(userInfo);
+        System.out.println(email);
+        System.out.println(accessToken);
+        return "receiveAC";
+    }
 
 	public String generateState() {
 		SecureRandom random = new SecureRandom();

@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Naver Login</title>
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        function closeWindow() {
+            // 현재 창을 닫기
+            window.close();
+        }
+        /*]]>*/
+    </script>
 </head>
-<body>
+<body onload="closeWindow()">
     <h1 th:text="#{naverLogin.title}">받는 곳</h1>
 </body>
 </html>
