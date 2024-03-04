@@ -40,13 +40,11 @@
 				<a href="index.html" class="logo"> <span class="symbol"><img
 						src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
 				</a>
-<p id="emailWelcomeMessage" th:text="${email}" data-email="">이메일테스트</p>
 
 				<!-- 네이버아이디로로그인 버튼 노출 영역 -->
 				<div id="naver_id_login"></div>
 
-				<p th:text="${session.email}"></p>
-				
+				<p th:if="${session.accessToken}" th:text="${session.email}"></p>
 
 				<!-- //네이버아이디로로그인 버튼 노출 영역 -->
 				<!-- Nav -->
@@ -67,7 +65,8 @@
 				<li><a href="login">Ipsum veroeros</a></li>
 				<li><a href="generic.html">Tempus etiam</a></li>
 				<li><a href="generic.html">Consequat dolor</a></li>
-				<li><a href="elements.html">Elements</a></li>
+				<li><a th:href="@{/logout}">
+로그아웃</a></li>
 			</ul>
 		</nav>
 
@@ -272,7 +271,6 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script th:inline="javascript">
-
     /*<![CDATA[*/
     var naver_id_login = new naver_id_login("puXPnu8QxCDBHhnD9gRj", "https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=puXPnu8QxCDBHhnD9gRj&state=STATE_STRING&redirect_uri=http://localhost:8087/receiveAC");
     var state = naver_id_login.getUniqState();  <!-- Assuming you are passing 'state' from the server-side -->
@@ -292,6 +290,10 @@
           console.log("사용자가 로그인하지 않았습니다.");
       }
       console.log(userInfoContainer);
+      naver_id_login.setPopup();
+      window.location.reload(true);
+
+
   });
     
     function displayUserInfo() {
