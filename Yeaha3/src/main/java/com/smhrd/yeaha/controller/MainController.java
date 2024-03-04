@@ -1,12 +1,13 @@
 package com.smhrd.yeaha.controller;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.net.http.HttpHeaders;
-
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,11 +15,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.smhrd.yeaha.service.GetUserInfoService;
 import com.smhrd.yeaha.service.RestJsonService;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.client.RestTemplate;
-import org.apache.http.HttpEntity;
 import org.json.JSONObject;
 import java.math.BigInteger;
 import java.security.SecureRandom;
+import org.springframework.http.HttpHeaders;
+
 
 @Controller
 public class MainController {
@@ -79,7 +80,7 @@ public class MainController {
         // access_token 추출
         String accessToken = accessTokenJsonObject.getString("access_token");
 
-        // 유저 정보가 포함된 JSON String을 받아옵니다.
+        // 유저 정보가 포함된 JSON String 받기
         GetUserInfoService getUserInfoService = new GetUserInfoService();
         String userInfo = getUserInfoService.getUserInfo(accessToken);
 
@@ -93,8 +94,9 @@ public class MainController {
         // 유저 정보를 세션에 저장
         session.setAttribute("email", email);
         session.setAttribute("accessToken", accessToken);
-
         model.addAttribute("accessToken", accessToken);
+        
+        // 콘솔창 로깅
         System.out.println(userInfo);
         System.out.println(email);
         System.out.println(accessToken);
@@ -120,20 +122,20 @@ public class MainController {
 
     private void logoutApiRequest(String accessToken) {
         // API 로그아웃 요청 코드
-        // RestTemplate 등을 사용하여 API에 로그아웃 요청을 보낼 수 있습니다.
-        // 자세한 구현은 사용하는 API에 따라 다를 수 있습니다.
-        // 예시:
-        String apiUrl = "https://example.com/logout";
-        HttpHeaders headers = new HttpHeaders();
+        // 네이버 API에 로그아웃 요청을 RestTemplate 등을 사용하여 보냄
+       	String apiUrl = "https://nid.naver.com/oauth2.0/token?grant_type=delete&client_id=puXPnu8QxCDBHhnD9gRj&client_secret=ed7dNaKXIo&access_token=" + accessToken + "&service_provider=NAVER";
+        
+       	// HTTP 요청설정
+       	HttpHeaders headers = new HttpHeaders();
         headers.set("Authorization", "Bearer " + accessToken);
         HttpEntity<String> entity = new HttpEntity<>(headers);
 
+       	// HTTP 요청
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<String> response = restTemplate.exchange(apiUrl, HttpMethod.POST, entity, String.class);
 
-        // 응답 확인 등 로깅 코드를 추가할 수 있습니다.
-        // 예시:
-        if (response.getStatusCode().is2xxSuccessful()) {
+        // 응답 확인 등 콘솔창 로깅 코드
+        if (response.getStatusCode() == HttpStatus.OK) {
             System.out.println("Logout request successful");
         } else {
             System.err.println("Logout request failed. Status code: " + response.getStatusCode());
