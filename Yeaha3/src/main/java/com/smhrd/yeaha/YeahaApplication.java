@@ -1,15 +1,16 @@
 package com.smhrd.yeaha;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.servlet.ServletComponentScan;
-import org.springframework.context.annotation.Configuration;
-
-//이 어노테이션이 있는 클래스의 위치로부터 하위에 있는 클래스들만 자동으로 객체화 시켜줌 
+import org.springframework.data.web.config.EnableSpringDataWebSupport;
 
 
+
+
+@EnableSpringDataWebSupport
 @SpringBootApplication
+@MapperScan("com.smhrd.yeaha.mapper")
 public class YeahaApplication {
 
 	public static void main(String[] args) {

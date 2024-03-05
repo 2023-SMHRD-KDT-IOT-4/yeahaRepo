@@ -42,9 +42,12 @@
 				</a>
 
 				<!-- 네이버아이디로로그인 버튼 노출 영역 -->
-				<div id="naver_id_login"></div>
+				<div>
+					<!-- 세션에 accessToken이 없을 때만 아래 내용을 렌더링 -->
+					<div id="naver_id_login"></div>
+				</div>
 
-				<p th:if="${session.accessToken}" th:text="${session.email}"></p>
+				<p th:if="${session.accessToken}" th:text="${session.name} + '님 환영합니다'"></p>
 
 				<!-- //네이버아이디로로그인 버튼 노출 영역 -->
 				<!-- Nav -->
@@ -65,8 +68,7 @@
 				<li><a href="login">Ipsum veroeros</a></li>
 				<li><a href="generic.html">Tempus etiam</a></li>
 				<li><a href="generic.html">Consequat dolor</a></li>
-				<li><a th:href="@{/logout}">
-로그아웃</a></li>
+				<li><a th:href="@{/logout}"> 로그아웃</a></li>
 			</ul>
 		</nav>
 
@@ -272,53 +274,52 @@
 	<script src="assets/js/main.js"></script>
 	<script th:inline="javascript">
     /*<![CDATA[*/
-    var naver_id_login = new naver_id_login("puXPnu8QxCDBHhnD9gRj", "https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=puXPnu8QxCDBHhnD9gRj&state=STATE_STRING&redirect_uri=http://localhost:8087/receiveAC");
-    var state = naver_id_login.getUniqState();  <!-- Assuming you are passing 'state' from the server-side -->
-    naver_id_login.setButton("white", 2, 40);
+	
+
+    var naver_id_login = new naver_id_login(
+        "puXPnu8QxCDBHhnD9gRj",
+        "https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=puXPnu8QxCDBHhnD9gRj&state=" + [[${session.state}]] + "&redirect_uri=http://localhost:8087/receiveAC");
+    naver_id_login.setButton("green", 3, 40);
     naver_id_login.setDomain("http://localhost:8087/");
-    naver_id_login.setState(state);
+    naver_id_login.setState();
     naver_id_login.setPopup();
+    console.log("사용자가 로그인.");
+	var state = [[${session.state}]];
+	var act = [[${session.accessToken}]];
+	
+    naver_id_login.init_naver_id_login(function (state) {
+    });
+ 
+    // 로그인 버튼 관련
+	var naverLoginButton = document.getElementById('naver_id_login');
+	loginBtnClose();
+    function loginBtnClose() {
+        if ([[${session.accessToken}]] != null) {
+            // 사용자가 로그인한 경우 로깅
+            console.log("이프문 트루");
+            // 메인페이지에 사용할 사용자 정보 가져오기
+            var email = naver_id_login.getProfileData('email');
+            var nickname = [[${session.nickname}]];
+            var name = [[${session.name}]];
+            var gender = [[${session.gender}]];
+            var birthday = naver_id_login.getProfileData('birthday');
+            var mobile = naver_id_login.getProfileData('mobile');
 
-    naver_id_login.init_naver_id_login(function (status) {
-      if (status) {
-        // 사용자 정보 가져오기
-          // 사용자가 로그인한 경우
-          displayUserInfo();
-        
-      } else {
-          // 사용자가 로그인하지 않은 경우
-          console.log("사용자가 로그인하지 않았습니다.");
-      }
-      console.log(userInfoContainer);
-      naver_id_login.setPopup();
-      window.location.reload(true);
+            // 로그인 성공 시 로그인 버튼을 숨기기
+            naverLoginButton.style.display = 'none';
+        } else {
+            // 사용자가 로그인하지 않은 경우 로깅
+            console.log("이프문 false");
 
-
-  });
-    
-    function displayUserInfo() {
-        // 사용자 프로필 데이터 가져오기
-        var email = naver_id_login.getProfileData('email');
-        var nickname = naver_id_login.getProfileData('nickname');
-        var name = naver_id_login.getProfileData('name');
-        var gender = naver_id_login.getProfileData('gender');
-        var birthday = naver_id_login.getProfileData('birthday');
-        var mobile = naver_id_login.getProfileData('mobile');
-        var accessToken = naver_id_login.oauthParams.access_token; // 추가: 접근 토큰 값 가져오기
-
-        // 사용자 정보 및 접근 토큰을 HTML 요소로 업데이트
-        var userInfoContainer = document.getElementById('user_info');
-        userInfoContainer.innerHTML = `
-            <h4>로그인 성공!</h4>
-            <h4>이메일: ${email}</h4>
-            <h4>닉네임: ${nickname}</h4>
-            <h4>이름: ${name}</h4>
-            <h4>성별: ${gender}</h4>
-            <h4>생일: ${birthday}</h4>
-            <h4>전화번호: ${mobile}</h4>
-            <h4>접근 토큰: ${accessToken}</h4> <!-- 추가: 접근 토큰 값 출력 -->
-        `;
+            // 로그아웃 시 다시 로그인 버튼을 보이도록 설정
+            naverLoginButton.style.display = 'block';
+        } 
     }
+
+   
 </script>
+
+
+
 </body>
 </html>
