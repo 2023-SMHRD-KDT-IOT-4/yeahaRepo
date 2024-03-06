@@ -319,6 +319,14 @@ function updateProgress() {
   progressBar.style.width = `${progressPercentage}%`; // 진행률에 따라 바의 너비를 조정합니다.
 }
 
+function getSurveyResultsJson(answers) {
+  const results = {};
+  answers.forEach((answer, index) => {
+    results[`question${index + 1}`] = answer;
+  });
+  return JSON.stringify(results);
+}
+
 // 설문조사 결과를 화면에 표시하는 함수입니다.
 function displayResults() {
   const surveyContainer = document.getElementById("survey-container"); // 결과를 표시할 컨테이너를 선택합니다.
@@ -343,32 +351,24 @@ function displayResults() {
   submitButton.className = "btn"; // 스타일링을 위한 클래스를 추가합니다.
   submitButton.onclick = () => submitSurveyResults(answers); // 버튼 클릭 시 설문 결과를 서버로 전송하는 함수를 호출합니다.
   surveyContainer.appendChild(submitButton); // 컨테이너에 버튼을 추가합니다.
-}
 
-// 설문조사 결과를 서버로 전송하는 함수입니다.
-function submitSurveyResults(surveyResults) {
-  // 서버로 전송할 데이터를 포맷합니다.
-  const formattedResults = {
-    user_id: "사용자 아이디 혹은 고유 식별자",
-    value1: surveyResults[0],
-    value2: surveyResults[1],
-    // 필요한 나머지 값들도 여기에 추가합니다.
+  submitButton.onclick = () => {
+    const surveyResultsJson = getSurveyResultsJson(answers);
+    console.log("설문 결과 JSON:", surveyResultsJson); // 콘솔에 JSON 출력
+
+    // 추가적으로 다음과 같은 작업을 수행할 수 있습니다.
+
+    // 1. JSON 데이터를 다운로드 링크로 제공합니다.
+    const downloadLink = document.createElement("a");
+    downloadLink.href =
+      "data:application/json;charset=utf-8," + surveyResultsJson;
+    downloadLink.download = "survey-results.json";
+    downloadLink.click();
+
+    // 2. JSON 데이터를 서버로 전송합니다.
+    // ...
+
+    // 3. 다른 웹 페이지로 전송합니다.
+    // ...
   };
-
-  // Fetch API를 사용하여 서버에 POST 요청을 보냅니다.
-  fetch("http://localhost:3000/submit-survey", {
-    // 서버url
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(formattedResults),
-  })
-    .then((response) => response.json()) // 응답을 JSON 형태로 변환합니다.
-    .then((data) => {
-      alert("설문 조사 결과가 성공적으로 저장되었습니다."); // 성공적으로 저장되었음을 알립니다.
-    })
-    .catch((error) => {
-      alert("설문 조사 결과를 저장하는데 실패했습니다."); // 저장에 실패했음을 알립니다.
-    });
 }
