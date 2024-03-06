@@ -15,7 +15,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.smhrd.yeaha.service.DBController;
+import com.smhrd.yeaha.service.DBLogService;
 import com.smhrd.yeaha.service.GetUserInfoService;
 import com.smhrd.yeaha.service.RestJsonService;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -28,22 +28,23 @@ import java.time.Period;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.http.HttpHeaders;
+
 @EnableSpringDataWebSupport
 @Controller
 public class MainController {
 
 	private final GetUserInfoService getUserInfoService;
 	private final RestJsonService restJsonService;
-    private final DBController dbController;
+	private final DBLogService dbLogService;
 
 	@Autowired
-	public MainController(GetUserInfoService getUserInfoService, RestJsonService restJsonService, DBController dbController) {
+	public MainController(GetUserInfoService getUserInfoService, RestJsonService restJsonService,
+			DBLogService dbLogService) {
 		this.getUserInfoService = getUserInfoService;
 		this.restJsonService = restJsonService;
-        this.dbController = dbController;
+		this.dbLogService = dbLogService;
 	}
 
-	
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String home() {
 		return "index";
@@ -112,20 +113,20 @@ public class MainController {
 		String phone = responseJsonObject.getString("mobile");
 		int ageCal = calculateAge(birthyear, birthday);
 
+		// 성별 매핑
+		int genderVal = mapGenderToValue(gender);
 		// 유저 정보를 세션에 저장
 		session.setAttribute("name", name);
 		session.setAttribute("age", calculateAge(birthyear, birthday));
 		session.setAttribute("email", email);
-		session.setAttribute("gender", gender);
+		session.setAttribute("gender", genderVal);
 		session.setAttribute("nickname", nickname);
 		session.setAttribute("accessToken", accessToken);
 
-		// 성별 매핑
-	    int genderVal = mapGenderToValue(gender);
 		// 로그인 시(access token 발급할 때) DB에 유저 정보 삽입 또는 업데이트
-	    System.out.println(genderVal);
-	    System.out.println();
-		dbController.processLogin(email, name, genderVal, ageCal, phone);
+		System.out.println(genderVal);
+		System.out.println();
+		dbLogService.processLogin(email, name, genderVal, ageCal, phone);
 
 		// 콘솔 창 로깅
 		System.out.println(userInfo);
@@ -205,10 +206,10 @@ public class MainController {
 		// 만 나이 반환
 		return age.getYears();
 	}
-	
+
 	private int mapGenderToValue(String gender) {
-	    return "M".equals(gender) ? 1 : 0;
-	    // 성별 DB 저장하기위해 int 변환
+		return "M".equals(gender) ? 1 : 0;
+		// 성별 DB 저장하기위해 int 변환
 	}
 
 }

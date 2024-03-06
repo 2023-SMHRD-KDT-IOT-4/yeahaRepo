@@ -19,6 +19,6 @@ public interface YeahaUserMapper {
 	        "WHERE user_email = #{email}")
 	void updateUser(YeahaUser user);
 
-    @Select("SELECT * FROM tbl_user WHERE user_email = #{user_email}")
-    YeahaUser selectUserByEmail(String user_email);
+    @Select("SELECT * FROM tbl_user WHERE user_email = #{email}")
+    YeahaUser selectUserByEmail(String email);
 }
