@@ -18,9 +18,13 @@ public class DBLogService {
 	}
 
 	@Transactional
-	public void processLogin(String email, String name, int genderVal, int ageCal, String phone) {
-		YeahaUser existingUser = userMapper.selectUserByEmail(email);
-		System.out.println(email);
+	public void processLogin(String user_email, String user_name, int user_genderVal, int user_ageCal, String user_phone) {
+		YeahaUser existingUser = userMapper.selectUserByEmail(user_email);
+		System.out.println(user_genderVal);
+		System.out.println(user_genderVal);
+		System.out.println(user_genderVal);
+		System.out.println(user_genderVal);
+		System.out.println(user_genderVal);
 System.out.println(existingUser);
 System.out.println(existingUser);
 System.out.println(existingUser);
@@ -31,24 +35,24 @@ System.out.println(existingUser);
 		if (existingUser == null) {
 			// 존재하지 않는 경우, 삽입 수행
 			YeahaUser newUser = new YeahaUser();
-			newUser.setEmail(email);
-			newUser.setName(name);
-			newUser.setGenderVal(genderVal);
-			newUser.setAgeCal(ageCal);
-			newUser.setPhone(phone);
+			newUser.setUser_email(user_email);
+			newUser.setUser_name(user_name);
+			newUser.setUser_genderVal(user_genderVal);
+			newUser.setUser_ageCal(user_ageCal);
+			newUser.setUser_phone(user_phone);
 
 			userMapper.insertUser(newUser);
-			System.out.println("User with email " + email + " inserted successfully.");
+			System.out.println("User with email " + user_email + " inserted successfully.");
 		} else {
 			// 이미 존재하는 경우, 업데이트 수행
-			existingUser.setEmail(email);
-			existingUser.setName(name);
-			existingUser.setGenderVal(genderVal);
-			existingUser.setAgeCal(ageCal);
-			existingUser.setPhone(phone);
+			existingUser.setUser_email(user_email);
+			existingUser.setUser_name(user_name);
+			existingUser.setUser_genderVal(user_genderVal);
+			existingUser.setUser_ageCal(user_ageCal);
+			existingUser.setUser_phone(user_phone);
 
 			userMapper.updateUser(existingUser);
-			System.out.println("User with email " + email + " updated successfully.");
+			System.out.println("User with email " + user_email + " updated successfully.");
 		}
 	}
 }

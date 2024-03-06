@@ -29,6 +29,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.http.HttpHeaders;
 
+
 @EnableSpringDataWebSupport
 @Controller
 public class MainController {
@@ -103,42 +104,42 @@ public class MainController {
 
 		// 유저의 정보 추출
 		JSONObject responseJsonObject = userInfoJsonObject.getJSONObject("response");
-		String name = responseJsonObject.getString("name");
-		String nickname = responseJsonObject.getString("nickname");
-		String age = responseJsonObject.getString("age");
-		String gender = responseJsonObject.getString("gender");
-		String birthyear = responseJsonObject.getString("birthyear");
-		String birthday = responseJsonObject.getString("birthday");
-		String email = responseJsonObject.getString("email");
-		String phone = responseJsonObject.getString("mobile");
-		int ageCal = calculateAge(birthyear, birthday);
+		String user_name = responseJsonObject.getString("name");
+		String user_nickname = responseJsonObject.getString("nickname");
+		String user_age = responseJsonObject.getString("age");
+		String user_gender = responseJsonObject.getString("gender");
+		String user_birthyear = responseJsonObject.getString("birthyear");
+		String user_birthday = responseJsonObject.getString("birthday");
+		String user_email = responseJsonObject.getString("email");
+		String user_phone = responseJsonObject.getString("mobile");
+		int user_ageCal = calculateAge(user_birthyear, user_birthday);
 
 		// 성별 매핑
-		int genderVal = mapGenderToValue(gender);
+		int user_genderVal = mapGenderToValue(user_gender);
 		// 유저 정보를 세션에 저장
-		session.setAttribute("name", name);
-		session.setAttribute("age", calculateAge(birthyear, birthday));
-		session.setAttribute("email", email);
-		session.setAttribute("gender", genderVal);
-		session.setAttribute("nickname", nickname);
+		session.setAttribute("name", user_name);
+		session.setAttribute("age", calculateAge(user_birthyear, user_birthday));
+		session.setAttribute("email", user_email);
+		session.setAttribute("gender", user_genderVal);
+		session.setAttribute("nickname", user_nickname);
 		session.setAttribute("accessToken", accessToken);
 
 		// 로그인 시(access token 발급할 때) DB에 유저 정보 삽입 또는 업데이트
-		System.out.println(genderVal);
+		System.out.println(user_genderVal);
 		System.out.println();
-		dbLogService.processLogin(email, name, genderVal, ageCal, phone);
+		dbLogService.processLogin(user_email, user_name, user_genderVal, user_ageCal, user_phone);
 
 		// 콘솔 창 로깅
 		System.out.println(userInfo);
-		System.out.println(name);
-		System.out.println(nickname);
-		System.out.println("연령대: " + age);
-		System.out.println("만 나이: " + calculateAge(birthyear, birthday));
-		System.out.println(gender);
-		System.out.println(birthyear);
-		System.out.println(birthday);
-		System.out.println(email);
-		System.out.println(phone);
+		System.out.println(user_name);
+		System.out.println(user_nickname);
+		System.out.println("연령대: " + user_age);
+		System.out.println("만 나이: " + calculateAge(user_birthyear, user_birthday));
+		System.out.println(user_gender);
+		System.out.println(user_birthyear);
+		System.out.println(user_birthday);
+		System.out.println(user_email);
+		System.out.println(user_phone);
 		return "receiveAC";
 	}
 
@@ -190,25 +191,25 @@ public class MainController {
 		return new BigInteger(130, random).toString(32);
 	}
 
-	private int calculateAge(String birthYear, String birthday) {
+	private int calculateAge(String user_birthYear, String user_birthday) {
 
 		// 만 나이생성기
 		// 현재 날짜 가져오기
 		LocalDate currentDate = LocalDate.now();
 
 		// 생일 정보로 LocalDate 객체 생성
-		LocalDate birthDate = LocalDate.of(Integer.parseInt(birthYear), Integer.parseInt(birthday.split("-")[0]),
-				Integer.parseInt(birthday.split("-")[1]));
+		LocalDate birthDate = LocalDate.of(Integer.parseInt(user_birthYear), Integer.parseInt(user_birthday.split("-")[0]),
+				Integer.parseInt(user_birthday.split("-")[1]));
 
 		// 나이 계산
-		Period age = Period.between(birthDate, currentDate);
+		Period user_age = Period.between(birthDate, currentDate);
 
 		// 만 나이 반환
-		return age.getYears();
+		return user_age.getYears();
 	}
 
-	private int mapGenderToValue(String gender) {
-		return "M".equals(gender) ? 1 : 0;
+	private int mapGenderToValue(String user_gender) {
+		return "M".equals(user_gender) ? 1 : 0;
 		// 성별 DB 저장하기위해 int 변환
 	}
 

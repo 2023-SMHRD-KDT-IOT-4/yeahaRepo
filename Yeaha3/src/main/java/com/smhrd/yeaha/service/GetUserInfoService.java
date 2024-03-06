@@ -7,6 +7,7 @@ import java.net.URL;
 import org.springframework.stereotype.Service;
 
 import lombok.NoArgsConstructor;
+
 @NoArgsConstructor
 @Service
 public class GetUserInfoService {

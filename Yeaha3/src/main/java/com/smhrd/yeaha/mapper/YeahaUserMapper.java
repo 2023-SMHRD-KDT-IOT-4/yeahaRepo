@@ -11,14 +11,14 @@ import com.smhrd.yeaha.model.YeahaUser;
 public interface YeahaUserMapper {
 
 	@Insert("INSERT INTO tbl_user (user_email, user_name, user_gender, user_age, user_phone, connected_at) " +
-	        "VALUES (#{email}, #{name}, #{gender}, #{ageCal}, #{phone}, NOW())")
+	        "VALUES (#{user_email}, #{user_name}, #{user_genderVal}, #{user_ageCal}, #{user_phone}, NOW())")
 	void insertUser(YeahaUser user);
 
-	@Update("UPDATE tbl_user SET user_name = #{name}, user_age = #{ageCal}, " +
-	        "user_gender = #{gender}, user_phone = #{phone}, connected_at = NOW() " +
-	        "WHERE user_email = #{email}")
+	@Update("UPDATE tbl_user SET user_name = #{user_name}, user_age = #{user_ageCal}, " +
+	        "user_gender = #{user_genderVal}, user_phone = #{user_phone}, connected_at = NOW() " +
+	        "WHERE user_email = #{user_email}")
 	void updateUser(YeahaUser user);
 
-    @Select("SELECT * FROM tbl_user WHERE user_email = #{email}")
-    YeahaUser selectUserByEmail(String email);
+    @Select("SELECT * FROM tbl_user WHERE user_email = #{user_email}")
+    YeahaUser selectUserByEmail(String user_email);
 }
