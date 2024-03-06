@@ -20,6 +20,7 @@ public class DBLogService {
 	@Transactional
 	public void processLogin(String email, String name, int genderVal, int ageCal, String phone) {
 		YeahaUser existingUser = userMapper.selectUserByEmail(email);
+		System.out.println(email);
 System.out.println(existingUser);
 System.out.println(existingUser);
 System.out.println(existingUser);
