@@ -26,3 +26,13 @@
 </body>
 
 </html>
+<script th:inline="javascript">
+        /*<![CDATA[*/ 
+        var sessionData = {
+            email: [[${session.email}]],
+            gender: [[${session.gender}]],
+            age: [[${session.age}]]
+        };
+        /*]]>*/
+    </script>
+
