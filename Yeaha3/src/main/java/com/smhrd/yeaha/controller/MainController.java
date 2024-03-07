@@ -51,9 +51,9 @@ public class MainController {
 		return "index";
 	}
 
-	@RequestMapping(value = "/test_home1", method = RequestMethod.GET)
-	public String login() {
-		return "test_home1";
+	@RequestMapping(value = "/survey", method = RequestMethod.GET)
+	public String initSurvey() {
+		return "survey";
 	}
 
 	@RequestMapping(value = "/naver_success", method = RequestMethod.GET)
