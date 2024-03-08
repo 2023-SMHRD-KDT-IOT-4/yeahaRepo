@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   displayQuestion();
+    console.log("Session Data:", sessionData);
+  
 });
 
 const questions = [
@@ -177,7 +179,7 @@ function getSurveyResultsJson(answers) {
 
 function submitSurveyResults(answers) {
   const surveyResponse = {
-    email: sessionData.email,
+    user_email: sessionData.email,
     gender: sessionData.gender,
     age: sessionData.age,
     height: parseInt(answers[0]),

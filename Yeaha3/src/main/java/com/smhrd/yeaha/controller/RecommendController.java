@@ -45,7 +45,7 @@ public class RecommendController {
 		return recommendEntity;
 	}
 	@RequestMapping(value = "/stroke", method = RequestMethod.GET)
-	public ResponseEntity<String> fetchDataFromFlaskServer3() {
+	public ResponseEntity<String> fetchDataFromFklaskServer3() {
 		RestTemplate restTemplate = new RestTemplate();
 		String url = flaskServerUrl + "/recommend?val1=0&val2=0&val3=1&val4=0"; // Flask 서버의 URL
 		

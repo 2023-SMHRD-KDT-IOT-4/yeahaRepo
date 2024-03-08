@@ -8,7 +8,7 @@ import com.smhrd.yeaha.model.SurveyResponse;
 @Mapper
 public interface SurveyResponseMapper {
 
-	@Insert("INSERT INTO tbl_user (user_email, gender, age, height, weight, bloodPressure, chol, glucose, smokingStatus, bmi, connected_at) "
+	@Insert("INSERT INTO tbl_response (user_email, gender, age, height, weight, bloodPressure, chol, glucose, smokingStatus, bmi, responsed_at) "
 			+ "VALUES (#{user_email}, #{gender}, #{age}, #{height}, #{weight}, #{bloodPressure}, #{chol}, #{glucose}, #{smokingStatus}, #{bmi}, NOW())")
 	void insertSurveyResponse(SurveyResponse surveyResponse);
 }
