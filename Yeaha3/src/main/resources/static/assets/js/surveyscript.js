@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   displayQuestion();
-    console.log("Session Data:", sessionData);
-  
+  console.log("Session Data:", sessionData);
+
 });
 
 const questions = [
@@ -176,7 +176,6 @@ function getSurveyResultsJson(answers) {
 
   return jsonString;
 }
-
 function submitSurveyResults(answers) {
   const surveyResponse = {
     user_email: sessionData.email,
@@ -190,37 +189,51 @@ function submitSurveyResults(answers) {
     smokingStatus: convertSmokingStatusToNumber(answers[5]),
     bmi: calculateBMI(parseInt(answers[0]), parseInt(answers[1])),
   };
-   const serverUrl1 = "http://localhost:8087/surveyres";
+
+  const serverUrl1 = "http://localhost:8087/surveyres";
   const serverUrl2 = "http://170.30.1.53:5500/iniAlgo";
 
-  // 두 개의 서버로 동시에 GET 요청을 보냅니다.
+  try {
+    // 두 개의 서버로 동시에 POST 요청을 보냅니다.
     Promise.all([
-    fetch(serverUrl1, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json", // 요청 바디의 타입을 JSON으로 설정
-      },
-      body: JSON.stringify(surveyResponse), // surveyResponse 객체를 JSON 문자열로 변환하여 전송
-      mode: 'cors',
-    }),
-    fetch(serverUrl2, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json", // 요청 바디의 타입을 JSON으로 설정
-      },
-      body: JSON.stringify(surveyResponse), // surveyResponse 객체를 JSON 문자열로 변환하여 전송
-      mode: 'cors',
-    }),
-  ])
-    .then(responses => {
-      const results = responses.map(response => response.json());
-      return Promise.all(results);
-    })
-    .then(data => {
-      console.log("서버 응답:", data);
-    })
-    .catch(error => {
-      console.error("서버 요청 실패:", error);
-    });
+      fetch(serverUrl1, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(surveyResponse),
+        mode: 'cors',
+      }),
+      fetch(serverUrl2, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(surveyResponse),
+        mode: 'cors',
+      }),
+    ])
+      .then(responses => Promise.all(responses.map(response => response.json())))
+      .then(data => {
+        console.log("서버 응답:", data);
 
+        // 두 요청 중 하나라도 성공하면
+        if (data[0].success || data[1].success) {
+          console.log("서버 중 하나로의 설문 결과가 성공적으로 제출되었습니다.");
+        } else {
+          console.error("모든 서버 요청이 실패했습니다.");
+        }
+      })
+      .catch(error => {
+        console.error("서버 응답 처리 중 오류가 발생했습니다:", error);
+      })
+      .finally(() => {
+        // 항상 페이지로 이동합니다.
+        const queryString = `?email=${encodeURIComponent(sessionData.email)}`;
+        window.location.href = `http://170.30.1.53:5500/algostart${queryString}`;
+        console.log("이메일 쿼리스트링 이동 확인");
+      });
+  } catch (error) {
+    console.error("서버 요청 중 오류가 발생했습니다:", error);
+  }
 }
