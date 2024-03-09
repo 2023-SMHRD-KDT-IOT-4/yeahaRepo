@@ -1,0 +1,135 @@
+#container {
+  width: 250px;
+  height: 50px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  left: 320px;
+  bottom: 0;
+  opacity: 0;
+  animation: fadeIn 1s 1, rotate 10s infinite;
+  animation-fill-mode: forwards;
+}
+  
+  .wrap {
+    animation: translate 1000ms infinite ease-in-out alternate, zindex 2000ms infinite ease-in-out;
+    animation-delay: 0, -2000ms;
+    position: absolute;
+    top: 50px;
+    right: 500px;
+    left: 0;
+    bottom: 0;
+
+  }
+  
+  .ball {
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 -5px 0 rgba(0, 0, 0, 0.15) inset;
+    background-image: url('/images/pill5.png'); /* 이미지 경로 설정 */
+    background-size: cover; /* 이미지 크기에 맞게 조정 */
+    border-radius: 50%;
+    animation: scale 1000ms infinite ease-in-out alternate;
+    animation-delay: -500ms;
+    transform: scale(0.5);
+    border: 2px solid black;
+  }
+  
+  #ball_planet {
+    width: 112.5px;
+    height: 112.5px;
+    box-shadow: 0 -11.25px 0 rgba(0, 0, 0, 0.15) inset;
+    background-color: #eee;
+    background-image: url('/images/pill7.png'); /* 이미지 경로 설정 */
+    background-size: cover; /* 이미지 크기에 맞게 조정 */
+    border-radius: 50%;
+   
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    animation: none;
+    transform: none;
+    
+    outline: none; /* 외곽선 제거 */
+}
+  
+  #wrap2 {
+    animation-delay: -1000ms;
+  }
+  
+  #ball2 {
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 -5px 0 rgba(0, 0, 0, 0.15) inset;
+    background-image: url('/images/pill2.png'); /* 이미지 경로 설정 */
+    background-size: cover; /* 이미지 크기에 맞게 조정 */
+    border-radius: 50%;
+    animation: scale 1000ms infinite ease-in-out alternate;
+    animation-delay: -1500ms;
+    transform: scale(0.5);
+    border: 2px solid black;
+}
+  
+  #wrap3 {
+    animation-delay: -1500ms;
+  }
+  
+  #ball3 {   
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 -5px 0 rgba(0, 0, 0, 0.15) inset;
+    background-image: url('/images/pill3.png'); /* 이미지 경로 설정 */
+    background-size: cover; /* 이미지 크기에 맞게 조정 */
+    border-radius: 50%;
+    animation: scale 1000ms infinite ease-in-out alternate;
+    animation-delay: -1500ms;
+    transform: scale(0.5);
+    border: 2px solid black;
+}
+  
+  
+  #wrap4 {
+    animation-delay: -2500ms;
+  }
+  
+  #ball4 {
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 -5px 0 rgba(0, 0, 0, 0.15) inset;
+    background-image: url('/images/pill4.png'); /* 이미지 경로 설정 */
+    background-size: cover; /* 이미지 크기에 맞게 조정 */
+    border-radius: 50%;
+    animation: scale 1000ms infinite ease-in-out alternate;
+    animation-delay: -1500ms;
+    transform: scale(0.5);
+    border: 2px solid black;
+}
+  
+  @keyframes translate {
+    0% {
+      transform: translateX(0) translateY(25px);
+    }
+    100% {
+      transform: translateX(200px) translateY(-25px);
+    }
+  }
+  @keyframes scale {
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes zindex {
+    25% {
+      z-index: 1;
+    }
+    75% {
+      z-index: -1;
+    }
+  }
+  @keyframes fadeIn {
+    100% {
+      opacity: 1;
+    }
+  }

@@ -61,6 +61,11 @@ public class MainController {
 		return "naver_success";
 	}
 
+	@RequestMapping(value = "/rbd", method = RequestMethod.GET)
+	public String recommendByDieasese() {
+		return "select";
+	}
+	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home1(HttpSession session, Model model) {
 
