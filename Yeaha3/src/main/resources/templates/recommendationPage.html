@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recommendation Page</title>
+    <title>추천 페이지</title>
 </head>
 <body>
-    <h1>Recommendation Texts</h1>
-    <div th:if="${recommendationTextsFromFlask}">
-        <p th:text="${recommendationTextsFromFlask}"></p>
-    </div>
-    <div th:unless="${recommendationTextsFromFlask}">
-        <p>No recommendation available.</p>
-    </div>
+   <div th:if="${recommendationTextsFromRedisList != null}">
+    <!-- Thymeleaf를 사용하여 Redis에서 추천을 가져와 표시 -->
+    <ul>
+        <li th:each="recommendation : ${recommendationTextsFromRedisList}">
+            <span th:utext="${recommendation}"></span>
+        </li>
+    </ul>
+</div>
+<p th:unless="${recommendationTextsFromRedisList != null}" >추천이 없습니다.</p>
+
 </body>
 </html>
