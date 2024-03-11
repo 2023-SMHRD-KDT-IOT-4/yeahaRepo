@@ -95,7 +95,7 @@ Your Enhanced Algorithm for Healthcare Assistant</b>
 
 ## 📌 ER다이어그램
 
-<br>
+<br>![EER](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152847475/d47d58cd-996b-4b59-8c32-8317bba304d3)
 
 ## 🖥 화면 구성
 
