@@ -83,31 +83,42 @@ Your Enhanced Algorithm for Healthcare Assistant</b>
 
 ## ⚙ 시스템 아키텍처(구조) 예시 
 
-<br>
+<br><br>
 
 ## 📌 SW유스케이스
+<br>![usecase](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152847475/d7c97b58-5a30-428c-8bbc-0c87da553c10)
 
-<br>
+<br><br>
 
 ## 📌 서비스 흐름도
+<br>![service](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152847475/7aae6773-15a6-4af0-8f32-b4e286ba0f8b)
 
-<br>
+<br><br>
 
 ## 📌 ER다이어그램
 
 <br>![EER](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152847475/d47d58cd-996b-4b59-8c32-8317bba304d3)
-
+tbl_product2 : A, 건강부위, 이름, 효능 <br>
+tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
+<br><br>
 ## 🖥 화면 구성
-
+<br>
 ### 로그인
-
 <br>
+![login](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152847475/35406298-1196-4260-8aec-a74ad5b9f16d)
 
-
+<br><br>
+### 설문
+<br>![설문](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152847475/f141c28d-dd8a-4ca1-b6f7-ddbf5860566f)
+<br><br>
+### 영양성분
+<br>![영양성분](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152847475/ae32b5f6-5609-421e-8b98-9c23ec3547ef)
+<br><br>
+### 예측
 <br>
+![pred](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152847475/a1a1f320-7289-4ed8-8702-56a4e137c618)
 
-
-
+<br><br>
 ## 🤾‍♂️ 트러블슈팅
 
 * 문제1<br>
