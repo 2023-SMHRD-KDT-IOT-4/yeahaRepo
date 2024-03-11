@@ -104,8 +104,7 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
 ## 🖥 화면 구성
 <br>
 ### 로그인
-<br>
-![login](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152847475/35406298-1196-4260-8aec-a74ad5b9f16d)
+<br>![login](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152847475/35406298-1196-4260-8aec-a74ad5b9f16d)
 
 <br><br>
 ### 설문
@@ -115,8 +114,7 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
 <br>![영양성분](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152847475/ae32b5f6-5609-421e-8b98-9c23ec3547ef)
 <br><br>
 ### 예측
-<br>
-![pred](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152847475/a1a1f320-7289-4ed8-8702-56a4e137c618)
+<br>![pred](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152847475/a1a1f320-7289-4ed8-8702-56a4e137c618)
 
 <br><br>
 ## 🤾‍♂️ 트러블슈팅
