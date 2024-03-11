@@ -3,9 +3,16 @@
 Your Enhanced Algorithm for Healthcare Assistant</b>
 
 
-# 📅 프로젝트 기간
+# 📅 프로젝트 기간  & 참여 인원
 2024.02.26 ~ 2022.03.13 (2주)
 <br>
+- 팀 프로젝트(5명)
+- 팀장: <a href="https://github.com/hosungjoun">전호성</a><br>(PM,Back-end) <br>
+- 팀원: <a href="">김상현</a>(Frontend : JavaScript, HTML, CSS) <br>
+- 팀원: <a href="https://github.com/1SSoll2/HSKimPF">김한솔</a><br> DB, Back-end, Machine Learning <br>
+- 팀원: <a href="">신우진</a><br>(Machine Learning) <br>
+<br>
+
 
 ## ⭐ 주요 기능
 * 기능1
