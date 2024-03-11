@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bars li {
+            font-size: 16px; /* Adjust the font size as needed */
+        }
+    </style>
+</head>
+<body>
+
+<h1 > 건강상태 분석결과</h1> <br> <h1 > 건강상태 분석결과</h1> <h1 > 건강상태 분석결과</h1> 
+
+    <h1 > 건강상태 분석결과</h1> 
+    <h2 style="color: white; font-family: Arial, sans-serif;">성분별 권장요소</h2> 
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<link rel="stylesheet" href="./assets/css/chat1.css" />
+<script defer src="./assets/js/chat1.js"></script>
+
+<div class="chartBarsWrap">
+    <div class="chartBars chartBars1">
+        <ul class="numbers">
+            <li><span>100%</span></li>
+            <li><span>80%</span></li>
+            <li><span>60%</span></li>
+            <li><span>40%</span></li>
+            <li><span>20%</span></li>
+            <li><span>0%</span></li>
+        </ul>
+        <ul class="bars">
+            <li>
+                <span class="tooltip"> 
+                <span class="tooltipContent">Very important info that you should read!</span>
+                <div data-percentage="52" class="bar greenBar trigger"></div>
+                </span>
+                <b>비타민B</b>
+            </li>
+            <li>
+                <span class="tooltip">  
+                <span class="tooltipContent">This one is trending well.</span>
+                <div data-percentage="83" class="bar blueBar trigger"></div>
+                </span> 
+                <b>비타민A</b> 
+            </li>
+            <li>
+                <span class="tooltip"> 
+                <span class="tooltipContent">I like cheese!</span>
+                <div data-percentage="94" class="bar orangeBar trigger"></div>
+                </span>
+                <b>비타민E</b>
+            </li>
+            <li>
+                <span class="tooltip"> 
+                <span class="tooltipContent">Monkey's are funny!</span> 
+                <div data-percentage="64" class="bar purpleBar trigger"></div>    
+                </span>
+                <b>칼륨</b>   
+            </li>
+        </ul>
+    </div>
+</div>
+
+<h3>권장 섭취량과 비교하기</h3>   
+<br>
+<br>
+<div class="box-piesite">
+    <ul>
+        <li class="design">
+            <div class="piesite" id="pie_0" data-pie="92"></div>
+        </li>
+        <li class="usability">
+            <div class="piesite" id="pie_2" data-pie="33"></div>
+        </li>
+        <li class="creativity">
+            <div class="piesite" id="pie_1" data-pie="64"></div>
+        </li>
+    </ul>
+</div>
+
+
+<!-- <p>&nbsp;</p>  -->
+ 
+ 
+<div class="chartBarsWrap chartBarsHorizontal"> 
+    <div class="chartBars"> 
+        <ul class="bars">  
+            <li> 
+                <div data-percentage="92" class="bar blueBarFlat"></div><b>권장</b></li>
+            <li>
+                <div data-percentage="33" class="bar orangeBarFlat"></div><b>상한</b></li>
+            <li>
+                <div data-percentage="64" class="bar greenBarFlat"></div><b>충분</b></li>
+            <li>
+              
+        </ul>
+    </div>
+</div>
+
+
+
+<h1 style="color: palevioletred; font-family: Arial, sans-serif;">전체적인 분석결과</h1> 
+<h3>한국인의 일일 섭취 권장량 또는 충분량 대비해
+    담은 영양제로 섭취할 수 있는 섭취량을 보여드리는 그래프</h3>
+
+<div class="chartBarsWrap">
+    <div class="chartBars chartBars3">
+        <ul class="numbers">
+            <li><span>100%</span></li>
+            <li><span>80%</span></li>
+            <li><span>60%</span></li>
+            <li><span>40%</span></li>
+            <li><span>20%</span></li>
+            <li><span>0%</span></li>
+        </ul>
+        <ul class="bars" >
+            <li><div data-percentage="92" class="bar greenBar trigger"  ></div><b>오메가3</b></li>
+            <li><div data-percentage="33" class="bar blueBar trigger"></div><b>마그네슘</b></li>
+            <li><div data-percentage="64" class="bar orangeBar trigger"></div><b>비타민C</b></li>
+            <li><div data-percentage="41" class="bar purpleBar trigger"></div><b>비타민D</b></li>
+            <li><div data-percentage="52" class="bar greenBar trigger"></div><b>아연</b></li> 
+            <li><div data-percentage="58" class="bar blueBar trigger"></div><b>비타민E</b></li>
+            <li><div data-percentage="65" class="bar orangeBar trigger"></div><b>비타민B</b></li>
+            <li><div data-percentage="91" class="bar purpleBar trigger"></div><b>비타민A</A></b></li>
+            <li><div data-percentage="32" class="bar greenBar trigger"></div><b>칼륨</b></li>    
+            <li><div data-percentage="68" class="bar blueBar trigger"></div><b>엽산</b></li>
+        </ul>
+    </div>
+</div>
+
+	
+<br>
+<br>
+<br>
+
+
+</body>
+</html>

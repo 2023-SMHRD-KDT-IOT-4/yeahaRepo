@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/loading.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* 여기에 추가적인 스타일이 있다면 작성하세요. */
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="loader-outer">
+          <div class="loader-inner">
+            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+          </div>
+        </div>
+        <h1><span>LOADING</span></h1>
+    </div>
+
+    <script>
+        // 3초(3000 밀리초) 후에 다른 페이지로 이동
+        setTimeout(function () {
+            window.location.href = 'http://localhost:8087/algoResultPage'; // 대상 페이지의 URL을 여기에 입력하세요.
+        }, 3000);
+    </script>
+</body>
+</html>

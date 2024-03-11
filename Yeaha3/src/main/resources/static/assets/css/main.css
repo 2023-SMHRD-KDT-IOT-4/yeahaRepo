@@ -2381,7 +2381,7 @@ div.aa{
 
 	
 		.image-container {
-			width: 790px;
+			width: 850px;
 			overflow-x: auto; /* 가로 스크롤을 허용 */
 			white-space: nowrap; /* 이미지들이 한 줄에 나열되도록 설정 */
 		}
