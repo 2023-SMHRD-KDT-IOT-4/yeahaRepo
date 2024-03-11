@@ -98,6 +98,7 @@ Your Enhanced Algorithm for Healthcare Assistant</b>
 ## 📌 ER다이어그램
 
 <br>![EER](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152847475/d47d58cd-996b-4b59-8c32-8317bba304d3)
+<br>
 tbl_product2 : A, 건강부위, 이름, 효능 <br>
 tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
 <br><br>
