@@ -3,7 +3,7 @@
 Your Enhanced Algorithm for Healthcare Assistant</b>
 
 
-# 📅 프로젝트 기간  & 참여 인원
+# 📅 프로젝트 기간  & 참여 인원 👨‍👩‍👦‍👦
 2024.02.26 ~ 2022.03.13 (2주)
 <br>
 - 팀 프로젝트(5명)
@@ -74,3 +74,42 @@ Your Enhanced Algorithm for Healthcare Assistant</b>
     </tr>
 </table>
 <br>
+
+
+
+
+
+## ⚙ 시스템 아키텍처(구조) 예시 
+
+<br>
+
+## 📌 SW유스케이스
+
+<br>
+
+## 📌 서비스 흐름도
+
+<br>
+
+## 📌 ER다이어그램
+
+<br>
+
+## 🖥 화면 구성
+
+### 로그인/회원가입/회원괸리/회원수정/회원탈퇴
+![image](https://user-images.githubusercontent.com/25995055/178401098-95f15a0e-a2de-415e-83d5-883bb4cb0656.png)
+<br>
+
+
+<br>
+
+
+
+## 🤾‍♂️ 트러블슈팅
+
+* 문제1<br>
+ 문제점 설명 및 해결방안
+ 
+* 문제2<br>
+ 문제점 설명 및 해결방안
