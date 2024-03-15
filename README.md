@@ -121,9 +121,17 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
 
 <br><br>
 ## 🤾‍♂️ 트러블슈팅
-
-* 문제1<br>
  문제점 설명 및 해결방안
  
+* 문제1<br>
+<br>![trouble1](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/78ab798b-ed64-487a-9466-2709e5f73898)
+
+
+ 
 * 문제2<br>
- 문제점 설명 및 해결방안
+
+<br>![trouble2](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/3cb793da-cd76-4727-b580-ca5b00d90075)
+
+
+<br>![trouble3](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/5de40795-42bb-4f7d-8c2f-bbf9e1e2f554)
+
