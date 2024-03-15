@@ -124,27 +124,26 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
 ## 👨‍👩‍👦‍👦 팀원 역할
 <table>
   <tr>
+    <td align="center"><img src="https://mblogthumb-phinf.pstatic.net/20160127_177/krazymouse_1453865104404DjQIi_PNG/%C4%AB%C4%AB%BF%C0%C7%C1%B7%BB%C1%EE_%B6%F3%C0%CC%BE%F0.png?type=w2" width="100" height="100"/></td>
     <td align="center"><img src="https://item.kakaocdn.net/do/fd49574de6581aa2a91d82ff6adb6c0115b3f4e3c2033bfd702a321ec6eda72c" width="100" height="100"/></td>
     <td align="center"><img src="https://mb.ntdtv.kr/assets/uploads/2019/01/Screen-Shot-2019-01-08-at-4.31.55-PM-e1546932545978.png" width="100" height="100"/></td>
     <td align="center"><img src="https://github.com/2023-SMHRD-KDT-IOT-4/Repo/assets/149558578/3666a1b2-5bbb-41ba-b113-9582fef82fbb" width="100" height="100"/></td>
     <td align="center"><img src="https://github.com/2023-SMHRD-KDT-IOT-4/Repo/assets/149558578/7b108ab0-3080-4bf1-a4a8-ad15c80341b6" width="100" height="100"/></td>
     <td align="center"><img src="https://pbs.twimg.com/media/B-n6uPYUUAAZSUx.png" width="100" height="100"/></td>
-    <td align="center"><img src="https://mblogthumb-phinf.pstatic.net/20160127_177/krazymouse_1453865104404DjQIi_PNG/%C4%AB%C4%AB%BF%C0%C7%C1%B7%BB%C1%EE_%B6%F3%C0%CC%BE%F0.png?type=w2" width="100" height="100"/></td>
+ 
       
   </tr>
   <tr>
-    <td align="center"><strong>류훈민</strong></td>
-    <td align="center"><strong>이건영</strong></td>
-    <td align="center"><strong>우리겨레</strong></td>
-    <td align="center"><strong>양윤형</strong></td>
-    <td align="center"><strong>이진우</strong></td>
+    <td align="center"><strong>전호성</strong></td>
     <td align="center"><strong>김상현</strong></td>
+    <td align="center"><strong>김한솔</strong></td>
+    <td align="center"><strong>신우진</strong></td>
 
   </tr>
   
   <tr>
-    <td align="center"><b>Frontend</b></td>
-    <td align="center"><b>Backend</b></td>  
+    <td align="center"><b>Backend</b></td>
+    <td align="center"><b>Frontend</b></td>  
     <td align="center"><b>DataBase</b></td>  
     <td align="center"><b>DataBase</b></td>  
     <td align="center"><b>Frontend</b></td>
@@ -153,58 +152,34 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
   
   <tr>
     <td align="center"><a href="https://github.com/HUNMINRYU" target='_blank'>github</a></td>
-    <td align="center"><a href="https://github.com/dlrjsdud" target='_blank'>github</a></td>
+     <td align="center"><a href="https://github.com/sangiot" target='_blank'>github</a></td>
     <td align="center"><a href="https://github.com/WooRiGyeoRe" target='_blank'>github</a></td>
     <td align="center"><a href="https://github.com/YangYnuHyeong" target='_blank'>github</a></td>
-    <td align="center"><a href="https://github.com/dlwlsdn808" target='_blank'>github</a></td>
-    <td align="center"><a href="https://github.com/sangiot" target='_blank'>github</a></td>
+
+
 
   </tr>
   </table>
   
-  ### 류훈민
-  * **프론트엔드**
-  * **카카오맵api 이용하여 자전거의 현재위치** 구현
-  * **카카오맵api 이용하여 라이딩 주행 기록** 구현
-  * 전반적인 웹 서비스 **화면 디자인** 및 **반응형 웹 적용**
-  * 기획 및 최종 발표 PPT 제작
-  * 시연영상 제작
+ ### 전호성
 
-### 이건영
-  * **프로젝트 팀장**, 퍼블리싱을 제외한 프로젝트 전반적인 기능 구현
-  * Spring 프로젝트 **환경설정** 및 라이브러리 추가
-  * **회원가입** 및 **회원정보수정** 프론트엔드/백엔드 기능구현
-  * **잠금/잠금해제** 프론트엔드/백엔드 기능구현
-  * **카카오맵 api**를 이용한 **일일 라이딩기록 확인** 프론트엔드/백엔드 기능구현
-  * **카카오맵 api**를 이용한 내 **자전거 현재 위치 확인 비동기통신** 프론트엔드/백엔드 기능구현
-  * 게시판 **글 작성 및 삭제, 게시판 전체보기** 프론트엔드/백엔드 기능구현
-  * 자전거 도난 예상시 웹페이지 **사용자 알림** 기능 프론트엔드/백엔드 기능구현
-  * 프로젝트 구현중 필요에 따라 데이터베이스 **테이블,컬럼 생성 및 삭제 / 데이터타입 및 제약조건 수정**
-  * Arduino **gps, 가속도센서 라이브러리 추가 및 구현**
-  * Arduino 3가지 센서 및 모듈, 와이파이 통신 **코드 통합**
-  * 각 센서에서 받은 위도,경도,가속도 값을 파싱하여 http통신을 통해 **Arduino to Spring 전달** 기능구현
-  * 웹페이지에서 잠금/잠금해제, 알림중지(모듈 청각적 알림 중지) 데이터 **Spring to Arduino 전달** 기능구현
 
-### 이진우
-  * **프로젝트 결과 발표 및 포스터 작성**
-      - 프로젝트 결과물에 대한 분석 및 효과적인 데이터 시각화를 통한 프레젠테이션 제작 및 전달
-    UI/UX 및 웹페이지 문구 설계
-  * **WBS 작성**
-      - 프로젝트의 전체적인 구조 및 일정을 파악하기 위한 WBS(Work Breakdown Structure) 구축
-  * **프론트엔드**
-      - 사용자 인터페이스 개발: 로그인, 로그아웃, 회원가입 페이지 개발
-      - 커뮤니티 기능 구현: 사용자 간 소통을 위한 게시판 및 게시글 작성 페이지 개발
-      - 반응형 웹 디자인: 다양한 디바이스에 최적화된 메인화면 페이지 및 기능 구현
-  * **프로젝트 IOT 제품 결과물 설계 및 조립**
-      - IoT 기반 프로젝트 결과물의 설계 및 하드웨어 조립을 통한 실제 사용 가능한 프로토타입 제작
-    
 ### 김상현
-  * **프론트엔드**
-  * **프론트 화면 제작 및 수정**
-      * 경보화면, 마이페이지, 로그인, 유의사항
-  * 전반적인 웹 서비스 **화면 디자인** 및 **반응형 웹 적용**
-  * 메뉴 활성화, 팝업창 기능 구현
-  * 화면설계서 및 최종발표 ppt 제작
+
+  * **모든 프론트 화면** 제작 및 수정(메인페이지,선택페이지,결과페이지,로딩페이지)
+  * **Scss to CSS**를 활용한 회전하는 애니메이션 로고 및 그래픽 효과 구현
+  * **선택페이지** 개별적인 스크립트 이동 구현 및 가로 스크롤 구현
+  * **HTML **네이버 로그인 API** 구현
+  * Css를 활용한 **머신러닝 분석결과 동적 차트,원형 그래프** 출력
+  * **동적 로딩** 페이지 구현
+  * **Base64 인코딩**을 통한 커서 이미지 변경
+  * JS를 활용한 **이미지 슬라이드 효과** 구현
+  * **SVG를 활용한 동적 이미지 구현** 및 고정형 메뉴 구현
+
+### 김한솔
+<br>
+    
+### 신우진
 
 
 ## 🤾‍♂️ 트러블슈팅
