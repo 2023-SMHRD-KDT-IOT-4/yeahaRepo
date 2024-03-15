@@ -1,4 +1,3 @@
-![image](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/f3e721d2-b119-4b1f-a2a4-bdd8ede91ffb)![image](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/78d39491-d471-45db-b2a4-3d9e4c9ea20f)# yeahaRepo
 <b>생애전주기별 건강기능식품 추천 알고리즘 <br>
 Your Enhanced Algorithm for Healthcare Assistant</b>
 
@@ -187,6 +186,18 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
 <br>![trouble1](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/78ab798b-ed64-487a-9466-2709e5f73898)
 
 <br>
+
+  * **아이콘 PNG 세부값과 크기를 조절하고 CSS가 적용되지 않아 **SCSS to CSS** 시도
+  * JSON 파일에 코드 추가하고 하단에 Watch Sass 변경
+
+ 
+* 문제2<br>
+
+<br>![trouble2](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/3cb793da-cd76-4727-b580-ca5b00d90075)
+
+
+ * **선택페이지에서 질병 선택시 기존 클래스가 사라지지 않는 문제
+  * 클래스를 5개로 나눠서 시도 후 **forEach문** 통해서 해결
 
 
 
