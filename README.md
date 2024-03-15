@@ -189,21 +189,15 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
  
  
 # 문제1<br>
-<br>![trouble1](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/78ab798b-ed64-487a-9466-2709e5f73898)
-
-<img src="https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/78ab798b-ed64-487a-9466-2709e5f73898" width="100">
+<img src="https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/78ab798b-ed64-487a-9466-2709e5f73898" alt="trouble1" width="500">
 <br>
-
   * 아이콘 PNG 세부값과 크기를 조절하고 CSS가 적용되지 않아 **SCSS to CSS** 시도
    JSON 파일에 코드 추가하고 하단에 Watch Sass 변경
-<img src="https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/78ab798b-ed64-487a-9466-2709e5f73898" alt="trouble1" width="300">
+
  
 # 문제2<br>
-
-<br>![trouble2](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/3cb793da-cd76-4727-b580-ca5b00d90075)
-
+<img src="https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/3cb793da-cd76-4727-b580-ca5b00d90075" alt="trouble2" width="500">
 <br>
-
  * 선택페이지에서 질병 선택시 기존 클래스가 사라지지 않는 문제
    클래스를 5개로 나눠서 시도 후 **forEach문** 통해서 해결
 
