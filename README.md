@@ -196,7 +196,7 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
 
   * 아이콘 PNG 세부값과 크기를 조절하고 CSS가 적용되지 않아 **SCSS to CSS** 시도
    JSON 파일에 코드 추가하고 하단에 Watch Sass 변경
-
+<img src="https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/78ab798b-ed64-487a-9466-2709e5f73898" alt="trouble1" width="300">
  
 # 문제2<br>
 
