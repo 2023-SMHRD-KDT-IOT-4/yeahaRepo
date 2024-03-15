@@ -148,10 +148,10 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
   </tr>
   
   <tr>
-    <td align="center"><a href="https://github.com/HUNMINRYU" target='_blank'>github</a></td>
-     <td align="center"><a href="https://github.com/sangiot" target='_blank'>github</a></td>
-    <td align="center"><a href="https://github.com/WooRiGyeoRe" target='_blank'>github</a></td>
-    <td align="center"><a href="https://github.com/YangYnuHyeong" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/HosungJoun" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/sangiot" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/1SSoll2" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/zebra0345" target='_blank'>github</a></td>
 
 
 
