@@ -159,6 +159,8 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
   </table>
   
  ### 전호성
+ *
+ <br>
 
 
 ### 김상현
@@ -174,9 +176,13 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
   * **SVG를 활용한 동적 이미지 구현** 및 고정형 메뉴 구현
 
 ### 김한솔
-<br>
+ *
+ <br>
+
     
 ### 신우진
+ *
+ <br>
 
 
 ## 🤾‍♂️ 트러블슈팅
@@ -195,8 +201,9 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
 
 <br>![trouble2](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/3cb793da-cd76-4727-b580-ca5b00d90075)
 
+<br>
 
- * **선택페이지에서 질병 선택시 기존 클래스가 사라지지 않는 문제
+ * 선택페이지에서 질병 선택시 기존 클래스가 사라지지 않는 문제
    클래스를 5개로 나눠서 시도 후 **forEach문** 통해서 해결
 
 
