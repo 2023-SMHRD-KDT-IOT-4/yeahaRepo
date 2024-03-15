@@ -191,6 +191,7 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
 # 문제1<br>
 <br>![trouble1](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/78ab798b-ed64-487a-9466-2709e5f73898)
 
+<img src="https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/78ab798b-ed64-487a-9466-2709e5f73898" width="100">
 <br>
 
   * 아이콘 PNG 세부값과 크기를 조절하고 CSS가 적용되지 않아 **SCSS to CSS** 시도
