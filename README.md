@@ -188,7 +188,7 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
 ## 🤾‍♂️ 트러블슈팅
  
  
-# 문제1<br>
+### 문제1<br>
 <img src="https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/78ab798b-ed64-487a-9466-2709e5f73898" alt="trouble1" width="500">
 
 
@@ -196,13 +196,13 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
    <br> JSON 파일에 코드 추가하고 하단에 Watch Sass 변경
 
  
-# 문제2<br>
+### 문제2<br>
 <img src="https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/f418c16b-54be-443f-a8c5-df1f77dea387" alt="trouble2" width="500">
 
  * 선택페이지에서 질병 선택시 기존 클래스가 사라지지 않는 문제<br>
    클래스를 5개로 나눠서 시도 후 **forEach문** 통해서 해결
 
-# 문제3<br>
+### 문제3<br>
 <img src="https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/e9bbde89-b0db-4a78-8d70-290b783198d3" alt="trouble3" width="500">
 
 * 마우스 커서 이미지를 웹페이지 띄우기 시도  <br>
