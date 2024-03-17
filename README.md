@@ -236,12 +236,12 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
  그림판으로 작게 축소해서 **Base64 인코딩으로 URL값** 가져와서 해결
 
 ### 오류해결 4<br>
-<![image](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/116381280/4357ee6c-1e4d-4a0a-9f65-48c631202152)>
+![image](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/116381280/4357ee6c-1e4d-4a0a-9f65-48c631202152)
 * 데이터베이스 인풋 오류
 
 
 ### 오류해결 4<br>
-<img src="![image](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/116381280/b4dbf45e-f445-4be5-aef8-b48b471f979f)">
+![image](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/116381280/b4dbf45e-f445-4be5-aef8-b48b471f979f)
 * 과대적합문제
 * X인자 조절을 통해 문제 해결
 <br>
