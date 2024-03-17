@@ -143,7 +143,7 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
     <td align="center"><b>Backend</b></td>
     <td align="center"><b>Frontend</b></td>  
     <td align="center"><b>DataBase</b></td>  
-    <td align="center"><b>DataBase</b></td>  
+    <td align="center"><b>DataScience</b></td>  
  
   </tr>
   
