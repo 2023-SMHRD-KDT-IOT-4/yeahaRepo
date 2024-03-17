@@ -9,7 +9,7 @@ Your Enhanced Algorithm for Healthcare Assistant</b>
 - 팀장: <a href="https://github.com/hosungjoun">전호성</a><br>PM, Back-end<br>
 - 팀원: <a href="https://github.com/1SSoll2/HSKimPF">김한솔</a><br> DB, Back-end, Datascience(Machine Learning) <br>
 - 팀원: <a href="">김상현</a><br>Frontend : JavaScript, HTML, CSS <br>
-- 팀원: <a href="">신우진</a><br>Datascience(Machine Learning) <br>
+- 팀원: <a href="https://github.com/zebra0345/portfolio">신우진</a><br>Datascience(Machine Learning) <br>
 <br>
 
 ## ⭐ 주요 기능
