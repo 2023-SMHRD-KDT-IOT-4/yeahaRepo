@@ -13,11 +13,16 @@ Your Enhanced Algorithm for Healthcare Assistant</b>
 <br>
 
 ## ⭐ 주요 기능
-* 기능1
-* 기능2
-* 기능3
-* 기능4
-* 기능5
+* 기초건강기능 설문조사 이후 맞춤형 영양제 추천 <br>
+![image](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152847492/5a48a7a1-b962-446f-9fe1-36e5064c206f)
+<br>
+
+* 7대 질병별 건강기능식품 추천 <br>
+![image](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152847492/dde2491b-f115-48cd-b576-70a613761826)
+
+
+  
+
 <br>
 
 ## ⛏ 기술스택
@@ -69,12 +74,22 @@ Your Enhanced Algorithm for Healthcare Assistant</b>
 </table>
 <br>
 
+## ⚙ 알고리즘 흐름도 
+<br>
+
+![image](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152847492/75520875-96be-455e-841f-f08c411c4a9c)
+
+<br>
 
 
+## ⚙ 프로젝트 계층도 
+<br>
+
+![image](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152847492/c282077a-e148-4cae-9005-13cc26f50e60)
 
 
-## ⚙ 시스템 아키텍처(구조) 예시 
-
+<br><br>![image](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152847492/850c6836-8a41-4d2c-998e-475ef49d68ea)
+<br> * 개발환경: SpringBoot Maven(MVC) <br>
 <br><br>
 
 ## 📌 SW유스케이스
@@ -95,10 +110,15 @@ tbl_product2 : A, 건강부위, 이름, 효능 <br>
 tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
 <br><br>
 ## 🖥 화면 구성
+
 <br>
 
+### 메인페이지
+![image](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152847492/6b220583-4588-4289-b04b-01a1a575a6da)
+
 ### 로그인
-<br>![login](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152847475/35406298-1196-4260-8aec-a74ad5b9f16d)
+<br>![image](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152847492/7fb1f2de-96f7-4a7f-ba41-86c04cc4b435)
+
 
 <br><br>
 ### 설문
@@ -151,7 +171,12 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
   </table>
   
  ### 전호성
- *
+ * 프로젝트 기획
+ * 산출문서 관리
+ * Back-end 담당
+   주요기능1: Naver Login API 활용, 로그인/로구아웃 구현 및 회원정보 DB로깅
+   주요기능2: redis 서버 구축 및 운용, 설문조사 결과 및 머신러닝 알고리즘 결과 redis로 요청 및 응답
+   
  <br>
 
 
