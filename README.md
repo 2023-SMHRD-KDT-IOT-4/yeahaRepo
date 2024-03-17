@@ -173,9 +173,9 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
  ### 전호성
  * 프로젝트 기획
  * 산출문서 관리
- * Back-end 담당
-   주요기능1: Naver Login API 활용, 로그인/로구아웃 구현 및 회원정보 DB로깅
-   주요기능2: redis 서버 구축 및 운용, 설문조사 결과 및 머신러닝 알고리즘 결과 redis로 요청 및 응답
+ * Back-end 담당 <br>
+   - 주요기능1: Naver Login API 활용, 로그인/로구아웃 구현 및 회원정보 DB로깅<br>
+   - 주요기능2: redis 서버 구축 및 운용, 설문조사 결과 및 머신러닝 알고리즘 결과 redis로 요청 및 응답<br>
    
  <br>
 
