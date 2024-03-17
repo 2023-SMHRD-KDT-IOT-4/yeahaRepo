@@ -202,7 +202,13 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
 
     
 ### 신우진
- *
+ * 빅데이터분석서 작성
+ * 질병데이터 수집
+ * 환자건강검진데이터 수집
+ * 알고리즘 질병별 모델링 테스트
+ * 남녀성별별 영양소 데이터 수집
+ * 알고리즘 함수화
+ * GPT API 연동 후 알고리즘 제약조건 추가
  <br>
 
 
@@ -215,7 +221,6 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
 
   * 아이콘 PNG 세부값과 크기를 조절하고 CSS가 적용되지 않아 **SCSS to CSS** 시도 
    <br> JSON 파일에 코드 추가하고 하단에 Watch Sass 변경
-
  
 ### 오류해결 2<br>
 <img src="https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/f418c16b-54be-443f-a8c5-df1f77dea387" alt="trouble2" width="500">
@@ -230,8 +235,15 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
  png 이미지를 Base64 인코딩 이후 url로 가져왔으나 사이즈 조절이 되지않는 오류 <br>
  그림판으로 작게 축소해서 **Base64 인코딩으로 URL값** 가져와서 해결
 
+### 오류해결 4<br>
+<img src="![image](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/116381280/4357ee6c-1e4d-4a0a-9f65-48c631202152)">
+* 데이터베이스 인풋 오류
 
 
+### 오류해결 4<br>
+<img src="![image](https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/116381280/b4dbf45e-f445-4be5-aef8-b48b471f979f)">
+* 과대적합문제
+* X인자 조절을 통해 문제 해결
 <br>
 <br>
 
