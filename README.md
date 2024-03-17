@@ -5,13 +5,12 @@ Your Enhanced Algorithm for Healthcare Assistant</b>
 # 📅 프로젝트 기간  & 참여 인원 👨‍👩‍👦‍👦
 2024.02.26 ~ 2022.03.13 (2주)
 <br>
-- 팀 프로젝트(5명)
-- 팀장: <a href="https://github.com/hosungjoun">전호성</a><br>(PM,Back-end) <br>
-- 팀원: <a href="">김상현</a>(Frontend : JavaScript, HTML, CSS) <br>
-- 팀원: <a href="https://github.com/1SSoll2/HSKimPF">김한솔</a><br> DB, Back-end, Machine Learning <br>
-- 팀원: <a href="">신우진</a><br>(Machine Learning) <br>
+- 팀 프로젝트(4명)
+- 팀장: <a href="https://github.com/hosungjoun">전호성</a><br>PM, Back-end<br>
+- 팀원: <a href="https://github.com/1SSoll2/HSKimPF">김한솔</a><br> DB, Back-end, Datascience(Machine Learning) <br>
+- 팀원: <a href="">김상현</a><br>Frontend : JavaScript, HTML, CSS <br>
+- 팀원: <a href="">신우진</a><br>Datascience(Machine Learning) <br>
 <br>
-
 
 ## ⭐ 주요 기능
 * 기능1
@@ -38,26 +37,20 @@ Your Enhanced Algorithm for Healthcare Assistant</b>
         </td>
     </tr>
     <tr>
-        <td>라이브러리</td>
+        <td>개발환경/도구</td>
         <td>
-            <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white"/> 
             <img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=for-the-badge&logo=Spring Boot&logoColor=white"/>
+            <img src="https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=VisualStudioCode&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Anaconda-44A833?style=for-the-badge&logo=Anaconda&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=Jupyter&logoColor=white"/>
             <img src="https://img.shields.io/badge/Sass-CC6699?style=flat-square&logo=Sass&logoColor=white"/>
         </td>
     </tr>
     <tr>
-        <td>개발도구</td>
+        <td>서버</td>
         <td>
-            <img src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=Eclipse&logoColor=white"/> 
-            <img src="https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=VisualStudioCode&logoColor=white"/>
-            <img src="https://img.shields.io/badge/Anaconda-44A833?style=for-the-badge&logo=Anaconda&logoColor=white"/>
-            <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=Jupyter&logoColor=white"/>
-        </td>
-    </tr>
-    <tr>
-        <td>서버환경</td>
-        <td>
-            <img src="https://img.shields.io/badge/Apache Tomcat 9.0-D22128?style=for-the-badge&logo=Apache Tomcat&logoColor=white"/> 
+            <img src="https://img.shields.io/badge/Apache Tomcat 9.0-D22128?style=for-the-badge&logo=Apache Tomcat&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white"/> 
         </td>
     </tr>
     <tr>
@@ -68,9 +61,8 @@ Your Enhanced Algorithm for Healthcare Assistant</b>
         </td>
     </tr>
     <tr>
-        <td>협업도구</td>
+        <td>형상관리</td>
         <td>
-            <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white"/> 
             <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"/>
         </td>
     </tr>
