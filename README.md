@@ -28,7 +28,7 @@ Your Enhanced Algorithm for Healthcare Assistant</b>
 ## ⛏ 기술스택
 <table>
     <tr>
-        <th>구분</th>
+        <th>구분</th> 
         <th>내용</th>
     </tr>
     <tr>
