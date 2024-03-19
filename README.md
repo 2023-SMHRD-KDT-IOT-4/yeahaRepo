@@ -229,7 +229,7 @@ tbl_disease : indexes, 진단과, 질병명, 영양소 <br>
    클래스를 5개로 나눠서 시도 후 **forEach문** 통해서 해결
 
 ### 오류해결 3<br>
-<img src="https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/e9bbde89-b0db-4a78-8d70-290b783198d3" alt="trouble3" width="500">
+<img src="https://github.com/2023-SMHRD-KDT-IOT-4/yeahaRepo/assets/152848523/e9bbde89-b0db-4a78-8d70-290b783198d3" alt="trouble3" >
 
 * 마우스 커서 이미지를 웹페이지 띄우기 시도  <br>
  png 이미지를 Base64 인코딩 이후 url로 가져와서 해결 <br>
