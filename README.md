@@ -3,7 +3,7 @@ Your Enhanced Algorithm for Healthcare Assistant</b>
 
 
 # 📅 프로젝트 기간  & 참여 인원 👨‍👩‍👦‍👦
-2024.02.26 ~ 2022.03.13 (2주)
+2024.02.26 ~ 2024.03.13 (2주)
 <br>
 - 팀 프로젝트(4명)
 - 팀장: <a href="https://github.com/hosungjoun">전호성</a><br>PM, Back-end<br>
